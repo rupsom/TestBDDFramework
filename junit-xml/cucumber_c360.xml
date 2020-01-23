@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0">
+<testcase classname="Google Search" name="Google Search for particular data" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given user is on Google page................................................undefined
+When title of Google Page is displayed......................................undefined
+Then type a text search.....................................................undefined
+Then click on Google Search button..........................................undefined
+]]></failure>
+</testcase>
+<testcase classname="Google Search" name="Google search data displaying" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given user is in a page where search result is displaying...................undefined
+When search list displayed..................................................undefined
+Then find out where expected serch result is displaying.....................undefined
+]]></failure>
+</testcase>
+</testsuite>
