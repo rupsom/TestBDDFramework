@@ -12,7 +12,7 @@ public class Utilities extends TestBase{
 	public static int PAGE_LOAD_TIMEOUT = 17;
 	public static int THREADSLEEP = 10000;
 
-	public Boolean isElementAvailable(String locator) {
+	public static Boolean isElementAvailable(String locator) {
 		
 		try {
 		driver.findElement(By.xpath(or.getProperty(locator)));
@@ -23,29 +23,39 @@ public class Utilities extends TestBase{
 		}
 	}
 	
-	public Boolean isElementDisplayed(String locator) {
+	public static Boolean isElementsAvailable(String locator) {
+		try {
+			driver.findElements(By.xpath(locator));
+			return true;
+		}
+		catch(Throwable throwable) {
+			return false;
+		}
+	}
+	
+	public static Boolean isElementDisplayed(String locator) {
 		return driver.findElement(By.xpath(or.getProperty(locator))).isDisplayed();
 	}
 	
-	public void click(String locator) {
+	public static void click(String locator) {
 		driver.findElement(By.xpath(locator)).click();
 	}
 	
-	public void typing(String locator, String value) {
+	public static void typing(String locator, String value) {
 		driver.findElement(By.xpath(locator)).sendKeys(value);
 	}
 	
-	public void typing(String locator, Keys keys) {
+	public static void typing(String locator, Keys keys) {
 		driver.findElement(By.xpath(locator)).sendKeys(keys);
 	}
 	
-	public void selectDropdown(String locator, int index) {
+	public static void selectDropdown(String locator, int index) {
 		WebElement dropdown = driver.findElement(By.xpath(locator));
 		Select select = new Select(dropdown);
 		select.selectByIndex(index);
 	}
 	
-	public void selectDropdown(String locator, String value) {
+	public static void selectDropdown(String locator, String value) {
 		WebElement dropdown = driver.findElement(By.xpath(locator));
 		Select select = new Select(dropdown);
 		select.selectByValue(value);

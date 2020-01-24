@@ -6,80 +6,92 @@ formatter.feature({
   "id": "google-search",
   "keyword": "Feature"
 });
+formatter.uri("GoogleResultSearchSelect.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Auto result click",
+  "description": "",
+  "id": "auto-result-click",
+  "keyword": "Feature"
+});
 formatter.scenario({
   "line": 3,
-  "name": "Google Search for particular data",
+  "name": "Search Result clicking",
   "description": "",
-  "id": "google-search;google-search-for-particular-data",
+  "id": "auto-result-click;search-result-clicking",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
+  "line": 4,
+  "name": "start two",
+  "keyword": "When "
+});
+formatter.step({
   "line": 5,
-  "name": "user is on Google page",
+  "name": "user is in google page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "title of Google Page is displayed",
+  "name": "title of page is showing",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "type a text search",
+  "name": "search a text",
   "keyword": "Then "
 });
 formatter.step({
   "line": 8,
-  "name": "click on Google Search button",
+  "name": "select the third one",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "line": 11,
-  "name": "Google search data displaying",
-  "description": "",
-  "id": "google-search;google-search-data-displaying",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
 formatter.step({
-  "line": 13,
-  "name": "user is in a page where search result is displaying",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "search list displayed",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 15,
-  "name": "find out where expected serch result is displaying",
+  "line": 9,
+  "name": "close two",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.step({
+  "line": 10,
+  "name": "Hi \"naveen\" and \"rupam\"",
+  "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.start()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.user_is_in_google_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.title_of_page_is_showing()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.search_a_text()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.select_the_third_one()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "GoogleResultSearchSelectStepDefinitions.close()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({});
 formatter.result({

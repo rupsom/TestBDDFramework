@@ -9,6 +9,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.test.util.Utilities;
 
 public class TestBase {
@@ -16,11 +19,16 @@ public class TestBase {
 	public static WebDriver driver = null;
 	public static Properties prop = null;
 	public static Properties or = null;
+	public static ExtentHtmlReporter ehreporter = new ExtentHtmlReporter(System.getProperty("user.dir")+
+			"\\ereporter-output\\projectoutput.html");
+	public static ExtentReports ereports = new ExtentReports();
+	public static ExtentTest etest = null;
 	
 	public TestBase() {
 		
 		prop = new Properties();
 		or = new Properties();
+		ereports.attachReporter(ehreporter);
 		try {
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
 					+"\\src\\main\\java\\com\\test\\config\\config.properties");
@@ -50,6 +58,6 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().pageLoadTimeout(Utilities.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Utilities.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);		
 	}
 }

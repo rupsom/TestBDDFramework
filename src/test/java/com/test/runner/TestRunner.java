@@ -9,10 +9,11 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="D:\\Projects_Selenium\\TestBDDFramework\\src\\main\\java\\com\\test\\feature",
 		glue= {"com\\test\\stepdefinitions"},
-		format= {"pretty"},
+		format= {"pretty","html:test-output"},
 		monochrome=true,
-		dryRun=false,
-		strict=true)
+		dryRun=true,
+		strict=true,
+		tags= {"~@RegressionTest"})
 
 public class TestRunner {
 
