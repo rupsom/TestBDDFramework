@@ -7,4 +7,3 @@ When title of page is showing
 Then search a text
 Then select the third one
 Then close two
-Then Hi "naveen" and "rupam"

@@ -1,100 +1,93 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("GoogleLinkFind.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("DataTableWork.feature");
 formatter.feature({
   "line": 1,
-  "name": "Google Search",
+  "name": "DataTableTest",
   "description": "",
-  "id": "google-search",
+  "id": "datatabletest",
   "keyword": "Feature"
 });
-formatter.uri("GoogleResultSearchSelect.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Auto result click",
+formatter.before({
+  "duration": 7075806110,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "Browser will open through setup() and close with close()",
   "description": "",
-  "id": "auto-result-click",
-  "keyword": "Feature"
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Search Result clicking",
-  "description": "",
-  "id": "auto-result-click;search-result-clicking",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 4,
-  "name": "start two",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 5,
-  "name": "user is in google page",
-  "keyword": "Given "
-});
-formatter.step({
   "line": 6,
-  "name": "title of page is showing",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "search a text",
-  "keyword": "Then "
+  "name": "Search box will get data through Data Table Concept",
+  "description": "",
+  "id": "datatabletest;search-box-will-get-data-through-data-table-concept",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 5,
+      "name": "@POCTest"
+    }
+  ]
 });
 formatter.step({
   "line": 8,
-  "name": "select the third one",
-  "keyword": "Then "
+  "name": "Home Page Opening",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 9,
-  "name": "close two",
-  "keyword": "Then "
+  "name": "Title of page is showing",
+  "keyword": "When "
 });
 formatter.step({
   "line": 10,
-  "name": "Hi \"naveen\" and \"rupam\"",
+  "name": "Provide the search text",
+  "rows": [
+    {
+      "cells": [
+        "Selenium Tutorial"
+      ],
+      "line": 12
+    }
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 14,
+  "name": "Google Search button click",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.start()"
+  "location": "DataTableWorkStepDefinitions.home_Page_Opening()"
+});
+formatter.result({
+  "duration": 142613013,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DataTableWorkStepDefinitions.title_of_page_is_showing()"
+});
+formatter.result({
+  "duration": 21582498,
+  "error_message": "junit.framework.ComparisonFailure: expected:\u003cGoogle[1]\u003e but was:\u003cGoogle[]\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat com.test.stepdefinitions.DataTableWorkStepDefinitions.title_of_page_is_showing(DataTableWorkStepDefinitions.java:40)\r\n\tat ✽.When Title of page is showing(DataTableWork.feature:9)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "DataTableWorkStepDefinitions.provide_the_search_text(DataTable)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.user_is_in_google_page()"
+  "location": "DataTableWorkStepDefinitions.google_Search_button_click()"
 });
 formatter.result({
   "status": "skipped"
 });
-formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.title_of_page_is_showing()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.search_a_text()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.select_the_third_one()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "GoogleResultSearchSelectStepDefinitions.close()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.after({
+  "duration": 1068700555,
+  "status": "passed"
 });
 });

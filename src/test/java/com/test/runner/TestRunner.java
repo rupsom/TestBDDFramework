@@ -11,9 +11,9 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com\\test\\stepdefinitions"},
 		format= {"pretty","html:test-output"},
 		monochrome=true,
-		dryRun=true,
+		dryRun=false,
 		strict=true,
-		tags= {"~@RegressionTest"})
+		tags= {"~@RegressionTest","@POCTest"})
 
 public class TestRunner {
 
