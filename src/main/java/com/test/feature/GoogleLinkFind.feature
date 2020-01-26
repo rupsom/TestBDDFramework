@@ -1,6 +1,6 @@
 Feature: Google Search
 
-@RegressionTest
+@first
 Scenario: Google Search for particular data
 When start one
 Given user is on Google page

@@ -2,7 +2,7 @@ Feature: DataTableTest
 
 Background: Browser will open through setup() and close with close()
 
-@POCTest
+@second
 Scenario: Search box will get data through Data Table Concept
 
 Given Home Page Opening

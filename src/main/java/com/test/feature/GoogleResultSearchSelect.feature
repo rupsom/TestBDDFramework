@@ -1,5 +1,6 @@
 Feature: Auto result click
 
+@second
 Scenario: Search Result clicking
 When start two
 Given user is in google page

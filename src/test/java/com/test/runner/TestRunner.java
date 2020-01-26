@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		dryRun=false,
 		strict=true,
-		tags= {"~@RegressionTest","@POCTest"})
+		tags= {"@first, @second"}
+		)
 
 public class TestRunner {
 

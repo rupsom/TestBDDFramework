@@ -37,7 +37,7 @@ public class DataTableWorkStepDefinitions extends TestBase{
 	public void title_of_page_is_showing() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		etest.info("HOME PAGE Title - "+driver.getTitle());
-	    Assert.assertEquals("Google1", driver.getTitle());
+	    Assert.assertEquals("Google", driver.getTitle());
 	}
 
 	@Then("^Provide the search text$")
